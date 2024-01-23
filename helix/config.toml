@@ -1,0 +1,68 @@
+theme = "horizon-dark"
+
+[editor]
+auto-completion = true
+auto-format = true
+auto-info = true
+auto-save = false
+bufferline = "never"
+color-modes = true
+completion-trigger-len = 3
+completion-replace = true
+cursorline = true
+cursorcolumn = false
+default-line-ending = "native"
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+idle-timeout = 300
+insert-final-newline = true
+line-number = "relative"
+middle-click-paste = false
+mouse = true
+preview-completion-insert = true
+rulers = [80, 120]
+scrolloff = 12
+shell = ["sh", "-c"]
+text-width = 80
+true-color = true
+undercurl = false
+workspace-lsp-roots = []
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+enable = true
+display-inlay-hints = false
+display-messages = true
+auto-signature-help = true
+snippets = true
+goto-reference-include-declaration = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = []
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[keys.normal]
+"V" = ["select_mode", "extend_to_line_bounds"]
+C-j = "half_page_down"
+C-k = "half_page_up"
+
+[keys.normal.space]
+"ret" = [":w", ":format"]
+q = ":q"
+l = [":new", ":insert-output lazygit", ":redraw", "jump_backward"]
+e = [":new", ":insert-output lf", ":redraw", "jump_backward"]
+
+[keys.insert]
+j = { k = "normal_mode" }
+
